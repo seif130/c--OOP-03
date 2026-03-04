@@ -34,15 +34,17 @@ namespace CinemaRefactored
             Projector.stop();
         }
 
-        public void AddTicket(Ticket ticket)
+        public bool  AddTicket(Ticket ticket)
         {
             if (ticketCount < Tickets.Length)
             {
                 Tickets[ticketCount++] = ticket;
+                return true;
             }
             else
             {
                 Console.WriteLine("No more tickets can be added.");
+                return false;
             }
         }
 
@@ -51,7 +53,7 @@ namespace CinemaRefactored
             Console.WriteLine($"Tickets for {CinemaName}:");
             for (int i = 0; i < ticketCount; i++)
             {
-                Console.WriteLine(Tickets[i]);
+                Console.WriteLine(Tickets[i].ToString());
             }
         }
 

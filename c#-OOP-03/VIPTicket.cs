@@ -8,10 +8,10 @@ namespace c__OOP_03
 {
     public class VIPTicket : Ticket
     {
-        public string LoungeAccess { get; set; }
+        public bool LoungeAccess { get; set; }
         public decimal ServiceCharge { get; set; } = 50;
 
-        public VIPTicket(string movieName, decimal price, string loungeAccess) : base(movieName, price)
+        public VIPTicket(string movieName, decimal price, bool loungeAccess) : base(movieName, price)
         {
             LoungeAccess = loungeAccess;
         }
@@ -21,7 +21,7 @@ namespace c__OOP_03
         }
         public override string ToString()
         {
-            return base.ToString() + " " + LoungeAccess + "VIP";
+            return base.ToString() + " "  + "VIP" + LoungeAccess;
         }
 
     }

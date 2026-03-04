@@ -8,9 +8,13 @@ namespace c__OOP_03
 {
     internal class ImaxTicket : Ticket
     {
-        public string ScreenType { get; set; } = "IMAX";
-        public ImaxTicket(string movieName, decimal price) : base(movieName, price)
+        public bool  Is3d { get; set; } 
+        public ImaxTicket(string movieName, decimal price , bool is3d) : base(movieName, price)
         {
+            Is3d = is3d;
+
+            if (is3d) price += 30;
+
         }
         public override decimal Priceaftertax()
         {
@@ -18,7 +22,7 @@ namespace c__OOP_03
         }
         public override string ToString()
         {
-            return base.ToString() + " " + ScreenType + "IMAX";
+            return base.ToString() + " "  + "IMAX" + Is3d ;
         }
     }
 }

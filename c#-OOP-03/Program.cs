@@ -96,8 +96,8 @@ namespace c__OOP_03
             myCinema.startcinema();
 
         Ticket ticket1 = new StandardTicket("The Batman", 100, "A1");
-        Ticket ticket2 = new VIPTicket("The Batman", 150, "Lounge Access");
-            Ticket ticket3 = new ImaxTicket("The Batman", 200);
+        Ticket ticket2 = new VIPTicket("The avengers", 150, true);
+        Ticket ticket3 = new ImaxTicket("The mist", 200 , true);
 
         myCinema.AddTicket(ticket1);
         myCinema.AddTicket(ticket2);
